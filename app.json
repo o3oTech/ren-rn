@@ -17,8 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.o3o.tech.renApp"
+      "supportsTablet": false,
+      "bundleIdentifier": "com.o3o.tech.renApp",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSExceptionDomains": {
+            "ren-o3otech.vercel.app": {
+              "NSTemporaryExceptionAllowsInsecureHTTPLoads": true
+            }
+          }
+        }
+      }      
     },
     "android": {
       "adaptiveIcon": {
