@@ -7,7 +7,7 @@ import Constants from 'expo-constants';
 export default function App() {
   return (
     <View style={styles.container}>
-      <WebView style={styles.box} source={{ uri: 'https://ren-o3otech.vercel.app/' }} />
+      <WebView style={styles.box} source={{ uri: 'https://ren-o3otech.vercel.app/' }} scalesPageToFit startInLoadingState />
       <StatusBar style="auto" />
     </View>
   );
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'rgba(26, 28, 42, 0.5)',
+    overflow: 'hidden',
   },
   box: {
     flex: 1,
